@@ -4,4 +4,4 @@ django-crontab==0.7.1
 sqlparse==0.4.2
 whitenoise
 psycopg2-binary
-guicorn
+gunicorn
