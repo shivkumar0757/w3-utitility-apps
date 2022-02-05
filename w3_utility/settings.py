@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'w3_utility.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / '/db.sqlite3',
     }
 }
 print('---------------------BASE_DIR:   ',BASE_DIR)
