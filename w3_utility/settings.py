@@ -85,8 +85,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-print('---------------------BASE_DIR:   ',BASE_DIR)
-print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$,  BASE_DIR1', BASE_DIR1)
+
 
 
 # Password validation
