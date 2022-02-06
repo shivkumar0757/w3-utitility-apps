@@ -1,5 +1,6 @@
 import requests
 import time
+import datetime
 from apscheduler.schedulers.blocking import BlockingScheduler
 
 sched = BlockingScheduler()
@@ -11,7 +12,7 @@ def my_scheduled_job():
     print('-------------------- Executed')
     print(requests.post('https://cntr.click/b4jZyQ2'))
     with open('myfile.txt','a') as outf:
-        outf.write(f'\n data!  : {time.datetime.now}' )
+        outf.write(f'\n data!  : {datetime.datetime.now}' )
     
 
 sched.start()
