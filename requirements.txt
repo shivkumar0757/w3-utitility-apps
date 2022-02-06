@@ -7,3 +7,4 @@ django_heroku
 psycopg2-binary
 gunicorn
 psycopg2
+apscheduler
