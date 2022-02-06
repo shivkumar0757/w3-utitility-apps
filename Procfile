@@ -1,6 +1,9 @@
 # release: python manage.py migrate
-web: gunicorn w3_utility.wsgi --log-file -
 
 clock: python clock.py
+
+web: gunicorn w3_utility.wsgi --log-file -
+
+
 
 # heroku ps:scale clock=1
