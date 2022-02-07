@@ -27,7 +27,7 @@ def my_scheduled_job():
     requests.get('https://w3-apps.herokuapp.com/')
 
 
-@sched.scheduled_job('cron', hour=10)
+@sched.scheduled_job('cron', hour=5)
 def send_email():
     data = f'''email data:
     {emdata}
