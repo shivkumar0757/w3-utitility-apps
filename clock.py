@@ -11,11 +11,11 @@ emdata=[]
 counter = 0
 #@sched.scheduled_job('cron', day_of_week='mon-fri', hour=17)
 
-@sched.scheduled_job('interval', minutes=1)
+@sched.scheduled_job('interval', minutes=5)
 def my_scheduled_job():
     global counter
     print('-------------------- Executed scheduled job @', datetime.datetime.now())
-    log, em= get_staking_data()
+    em , log = get_staking_data()
     logdata.append(log)
     emdata.append(em)
     if counter < 5:
@@ -29,8 +29,14 @@ def my_scheduled_job():
 
 @sched.scheduled_job('cron', hour=10)
 def send_email():
+    data = f'''email data:
+    {emdata}
+
+    log data:
+    {logdata}
+    '''
     print('---------------------------------------Email Sending__________________________')
-    Emails.sendMail('shivkumar0757@gmail.com',)
+    Emails.sendMail('shivkumar0757@gmail.com',data )
     print('---------------------------------------Email Sending__________________________')
 
 
