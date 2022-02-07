@@ -8,7 +8,7 @@ from staking_status_app.email import Emails
 sched = BlockingScheduler()
 logdata=[]
 emdata=[]
-
+counter = 0
 #@sched.scheduled_job('cron', day_of_week='mon-fri', hour=17)
 
 @sched.scheduled_job('interval', minutes=5)
@@ -17,6 +17,12 @@ def my_scheduled_job():
     log, em= get_staking_data()
     logdata.append(log)
     emdata.append(em)
+    if counter < 5:
+        print('email data: ')
+        print(emdata)
+        print('log data')
+        print(logdata)
+        counter += 1
     requests.get('https://w3-apps.herokuapp.com/')
 
 
