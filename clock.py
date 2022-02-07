@@ -17,6 +17,7 @@ def my_scheduled_job():
     log, em= get_staking_data()
     logdata.append(log)
     emdata.append(em)
+    requests.get('https://w3-apps.herokuapp.com/')
 
 
 @sched.scheduled_job('cron', hour=10)
