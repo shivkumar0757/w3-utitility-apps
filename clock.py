@@ -13,6 +13,7 @@ counter = 0
 
 @sched.scheduled_job('interval', minutes=5)
 def my_scheduled_job():
+    global counter
     print('-------------------- Executed scheduled job @', datetime.datetime.now())
     log, em= get_staking_data()
     logdata.append(log)
