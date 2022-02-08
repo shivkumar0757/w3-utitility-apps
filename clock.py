@@ -26,12 +26,15 @@ def my_scheduled_job():
         counter += 1
     requests.get('https://w3-apps.herokuapp.com/')
 
+@sched.scheduled_job('interval', minutes=120)
+def doMail():
+    send_email()
 
 @sched.scheduled_job('cron', hour=5)
 def send_email():
     data = f'''email data:
     {emdata}
-
+===================================================================
     log data:
     {logdata}
     '''
