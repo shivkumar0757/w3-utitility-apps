@@ -38,8 +38,9 @@ def send_email():
     log data:
     {logdata}
     '''
+    em=Emails()
     print('---------------------------------------Email Sending__________________________')
-    Emails.sendMail('shivkumar0757@gmail.com',data )
+    em.sendMail('shivkumar0757@gmail.com',data )
     print('---------------------------------------Email Sending__________________________')
 
 
