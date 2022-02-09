@@ -6,7 +6,8 @@ print("-------------- Sending email-----------")
 
 #send_email()
 data = 'Testing email api'
-Emails.sendMail('shivkumar0757@gmail.com',data )
+em= Emails()
+em.sendMail('shivkumar0757@gmail.com',data )
 
 print("email sent---------")
 
