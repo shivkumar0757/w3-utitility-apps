@@ -1,4 +1,4 @@
-# from clock import send_email,emdata,logdata
+from clock import send_email,emdata,logdata
 from staking_status_app.email import Emails
 
 
@@ -11,6 +11,6 @@ em.sendMail('shivkumar0757@gmail.com',data )
 
 print("email sent---------")
 
-print('logData: ',send_email)
+print('logData: ',logdata)
 
 print('emdata: ', emdata)
