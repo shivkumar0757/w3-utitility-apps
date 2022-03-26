@@ -15,15 +15,35 @@
 
             <div>
                 <h3>Current status:</h3>
+                Last check time: {{data.0.time}}
                 <div class="row text-center mt-5">
                     <div class="col-sm-4 ">
                         <h6>Axs-30 days</h6>
+                        <!-- <br /> -->
+                        {% if data.0.available %}
+                        <span class="text-success">Available</span>
+                        {% else %}
+                        <span class="text-danger">Not Available</span>
+                        {% endif %}
+
                     </div>
                     <div class="col-sm-4">
                         Axs-60 days
+                        <br />
+                        {% if data.1.available %}
+                        <span class="text-success">Available</span>
+                        {% else %}
+                        <span class="text-danger">Not Available</span>
+                        {% endif %}
                     </div>
                     <div class="col-sm-4">
                         Axs-90 days
+                        <br />
+                        {% if data.2.available %}
+                       <span class="text-success">Available</span> 
+                        {% else %}
+                        <span class="text-danger">Not Available</span>
+                        {% endif %}
                     </div>
                   </div>
             </div>
