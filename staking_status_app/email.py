@@ -3,7 +3,7 @@ import smtplib
 class Emails:
     def __init__(self):
         self.logId='mailtestdemoapi@gmail.com'
-        self.logPass='5rn3e5BE2FWHNL9kDXwA'
+        self.logPass='XXX'
     
     def sendMail(self,reciever, msg):
         try:
